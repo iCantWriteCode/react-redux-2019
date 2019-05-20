@@ -4,11 +4,19 @@ import { connect } from 'react-redux'
 
 class SongList extends Component {
     render() {
+        console.log(this.props)
         return <div>Song List</div>
     }
 }
 
-export default connect()(SongList); // Connect Component with redux
+// Getting data from store
+const mapStateToProps = (state) => {
+    console.log(state)
+    // return state
+    return { songs: state.songs }
+}
+
+export default connect(mapStateToProps)(SongList); // Connect Component with redux
 
 // function connect() {
 //     return function() {
