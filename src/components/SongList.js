@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// Redux
 import { connect } from 'react-redux'
 
 import { selectSong } from '../actions'
@@ -27,6 +26,7 @@ class SongList extends Component {
     render() {
         return <div className="ui divided list">{this.renderList()}</div>
     }
+
 }
 
 // Getting data from store
@@ -36,11 +36,3 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps, { selectSong })(SongList); // Connect Component with redux
-
-// function connect() {
-//     return function() {
-//         return 'Hi There'
-//     }
-// }
-// connect()    Does Nothing
-// connect()()  Invokes the inner function
